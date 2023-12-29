@@ -1,13 +1,257 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.theme-root.light {
+  --cl-modalBg: #fff;
+  --cl-popupBg: #fff;
+  --cl-bg1: #fff;
+  --cl-bg2: #fcfcfc;
+  --cl-bg3: #f5f5f5;
+  --cl-bg4: #5e6673;
+  --cl-bg5: #181a20;
+  --cl-bg6: #0b0e11;
+  --cl-line: #eaecef;
+  --cl-liteBg1: #fff;
+  --cl-liteBg2: #fafafa;
+  --cl-textPrimary: #1a1a1a;
+  --cl-textSecondary: #5e6673;
+  --cl-textThird: #8c929d;
+  --cl-textPlaceholder: #bfc4cc;
+  --cl-textDisabled: #bfc4cc;
+  --cl-textYellow: #c99400;
+  --cl-textBuy: #00c48c;
+  --cl-textSell: #ff4d4f;
+  --cl-textToast: #f5a623;
+  --cl-textWhite: #fff;
+  --cl-textMuted: #ccc;
+  --cl-lines-primary: #eaecef;
+  --cl-lines-light: #eaecef;
+  --cl-lines-dark: #272a2e;
+  --cl-iconNormal: #929aa5;
+  --cl-alertYellowBg: #fffde6;
+  --cl-badgeYellowBg: #fef6d8;
+  --cl-outlineHover: #ffa61d;
+  --cl-primaryHover: #ff761d;
+  --cl-primary: #ff561d;
+  --cl-toastFailBg: #fef6f7;
+  --cl-depthSellBg: #fef1f2;
+  --cl-sellHover: #ff707e;
+  --cl-sell: #f6465d;
+  --cl-toastSuccessBg: #f2fff7;
+  --cl-depthBuyBg: #e6fff1;
+  --cl-buyHover: #32d993;
+  --cl-buy: #0ecb81;
+  --cl-invBg: #fafafa;
+  --cl-success: #0ecb81;
+  --cl-successBg: #f2fff7;
+  --cl-error: #f6465d;
+  --cl-errorBg: #fef6f7;
+  --cl-disableBg: #eaecef;
+}
+
+.theme-root.dark {
+  --cl-modalBg: #1e2329;
+  --cl-popupBg: #1e2329;
+  --cl-bg1: #181a20;
+  --cl-bg2: #0b0e11;
+  --cl-bg3: #2b3139;
+  --cl-bg4: #5e6673;
+  --cl-bg5: #181a20;
+  --cl-bg6: #0b0e11;
+  --cl-line: #474d57;
+  --cl-liteBg1: #20262d;
+  --cl-liteBg2: #191a1f;
+  --cl-textPrimary: #eaecef;
+  --cl-textSecondary: #b7bdc6;
+  --cl-textThird: #848e9c;
+  --cl-textPlaceholder: #5e6673;
+  --cl-textDisabled: #5e6673;
+  --cl-textYellow: #f0b90b;
+  --cl-textBuy: #0ecb81;
+  --cl-textSell: #f6465d;
+  --cl-textToast: #a37200;
+  --cl-textWhite: #fff;
+  --cl-textMuted: #444;
+  --cl-lines-primary: #272a2e;
+  --cl-lines-light: #272a2e;
+  --cl-lines-dark: #272a2e;
+  --cl-iconNormal: #848e9c;
+  --cl-alertYellowBg: #281a00;
+  --cl-badgeYellowBg: #3c2601;
+  --cl-outlineHover: #ff961d;
+  --cl-primaryHover: #ff761d;
+  --cl-primary: #ff561d;
+  --cl-toastFailBg: #35141d;
+  --cl-depthSellBg: #35141d;
+  --cl-sellHover: #ff707e;
+  --cl-sell: #f6465d;
+  --cl-toastSuccessBg: #102821;
+  --cl-depthBuyBg: #102821;
+  --cl-buyHover: #32d993;
+  --cl-buy: #0ecb81;
+  --cl-invBg: #2b3139;
+  --cl-success: #0ecb81;
+  --cl-error: #f6465d;
+  --cl-successBg: #102821;
+  --cl-errorBg: #35141d;
+  --cl-disableBg: #474d57;
+}
+
+.theme-root {
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-minor: 18px;
+  --fs-plus: 20px;
+  --fs-xp: 24px;
+  --fs-lg: 28px;
+  --fs-xl: 32px;
+  --fs-xxl: 40px;
+  --fs-xxxl: 48px;
+  --fs-xxxxl: 56px;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-regular: 500;
+  --fw-medium: 600;
+  --fw-semibold: 700;
+  --fw-bold: 800;
+  --lh-body: 1.5;
+  --lh-heading: 1.25;
+  --se-line: 1px;
+  --se-tiny: 2px;
+  --se-minor: 4px;
+  --se-xxs: 6px;
+  --se-xs: 8px;
+  --se-s: 10px;
+  --se-ls: 12px;
+  --se-sm: 16px;
+  --se-md: 24px;
+  --se-plus: 32px;
+  --se-xp: 40px;
+  --se-lg: 48px;
+  --se-xl: 64px;
+  --se-xxl: 80px;
+  --sz-avatar: 48px;
+  --sz-inputcode: 44px;
+  --sz-inputcodemobile: 40px;
+}
+
+.theme-root {
+  --animation-duration-fast: 100ms;
+  --animation-duration-base: 250ms;
+  --animation-duration-slow: 400ms;
+  --zindex-mask: 10;
+  --zindex-menu: 1000;
+  --zindex-header: 1100;
+  --zindex-dropdown: 1200;
+  --zindex-modal: 1200;
+  --zindex-backTop: 1225;
+  --zindex-calendar: 1250;
+  --zindex-mobilePop: 1275;
+  --zindex-notification: 1300;
+  --zindex-alert: 1350;
+  --zindex-tooltip: 1400;
+  --zindex-coachmark: 1400;
+  --zindex-drawer: 9999;
+  --radii-2xs: 2px;
+  --radii-xs: 4px;
+  --radii-s: 6px;
+  --radii-m: 8px;
+  --radii-l: 10px;
+  --radii-2l: 12px;
+  --radii-xl: 16px;
+  --radii-2xl: 30px;
+  --radii-circle: 100em;
+  --space-5xs: 2px;
+  --space-4xs: 4px;
+  --space-3xs: 5px;
+  --space-2xs: 8px;
+  --space-xs: 10px;
+  --space-s: 12px;
+  --space-m: 15px;
+  --space-l: 20px;
+  --space-xl: 24px;
+  --space-2xl: 28px;
+  --space-3xl: 32px;
+  --space-4xl: 36px;
+  --space-5xl: 40px;
+}
+
+.theme-root.dark {
+  --shadow-shadow1: 0px 3px 6px rgba(0, 0, 0, 0.04),
+    0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px 0px 1px rgba(94, 102, 115, 0.8);
+  --shadow-shadow2: 0px 7px 14px rgba(0, 0, 0, 0.08),
+    0px 3px 6px rgba(0, 0, 0, 0.08), inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+  --shadow-shadow3: 0px 16px 32px rgba(0, 0, 0, 0.16),
+    0px 8px 16px rgba(0, 0, 0, 0.16), inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+  --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+}
+
+.theme-root.light {
+  --shadow-shadow1: 0px 0px 1px rgba(24, 26, 32, 0.1),
+    0px 3px 6px rgba(71, 77, 87, 0.04), 0px 1px 2px rgba(24, 26, 32, 0.04);
+  --shadow-shadow2: 0px 0px 1px rgba(24, 26, 32, 0.1),
+    0px 7px 14px rgba(71, 77, 87, 0.08), 0px 3px 6px rgba(24, 26, 32, 0.08);
+  --shadow-shadow3: 0px 0px 1px rgba(24, 26, 32, 0.1),
+    0px 16px 32px rgba(71, 77, 87, 0.16), 0px 8px 16px rgba(24, 26, 32, 0.16);
+  --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  background: var(--cl-bg2);
+  color: var(--cl-textPrimary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "inter", sans-serif, "Roboto", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hidden {
+  display: none !important;
+}
+
+.button {
+  grid-gap: var(--space-3xs);
+  --button-bg: var(--cl-primary);
+  --button-color: var(--cl-textWhite);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: var(--radii-xs);
+  color: var(--button-color);
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+  overflow: hidden;
+  padding: var(--space-s) var(--space-l);
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  word-break: break-all;
+  transition: background-color ease-in-out var(--animation-duration-fast),
+    box-shadow ease-in-out var(--animation-duration-fast);
+}
+
+.button:hover {
+  --button-bg: var(--cl-primaryHover);
+}
+
+.button:focus {
+  --tw-ring-offset-shadow: 0 0 0 2px var(--cl-bg2);
+  --tw-ring-shadow: 0 0 0 4px var(--cl-primary);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 #0000;
 }
