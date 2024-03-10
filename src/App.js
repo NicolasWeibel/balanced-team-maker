@@ -6,6 +6,8 @@ import { Provider } from "react-redux";
 import AnimatedRoutes from "./Routes";
 
 function App() {
+  document.body.className = "theme-root light";
+
   return (
     <HelmetProvider>
       <Helmet>
