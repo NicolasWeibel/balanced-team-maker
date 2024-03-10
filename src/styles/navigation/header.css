@@ -11,12 +11,6 @@
   border-bottom: 1px solid var(--cl-bg3);
 }
 
-.header__container {
-  max-width: 1292px;
-  margin: auto;
-  padding: 0 5%;
-}
-
 .desktop-header {
   min-height: 79px;
   display: none;
@@ -33,7 +27,7 @@
   outline-offset: 5px;
 }
 
-.logo-letters {
+.logo__text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,11 +36,11 @@
   margin-left: var(--space-4xs);
 }
 
-.logo-letters__first-row {
+.logo__text--first-row {
   font-size: var(--fs-plus);
 }
 
-.logo-letters__second-row {
+.logo__text--second-row {
   font-size: var(--fs-md);
 }
 
@@ -58,20 +52,20 @@
   font-weight: var(--fw-medium);
 }
 
-.navbar-ul {
+.navbar__list {
   display: flex;
   list-style: none;
   margin-left: auto;
   gap: 20px;
 }
 
-.navbar-ul--mobile {
+.navbar__list--mobile {
   flex-direction: column;
   gap: 0;
   margin: 0;
 }
 
-.navbar-li {
+.navbar__item {
   padding: 16px 16px;
   font-size: var(--fs-plus);
   border-bottom: 1px solid var(--cl-bg3);
@@ -139,7 +133,7 @@
   border: none;
 }
 
-.navbar-panel {
+.navbar__panel {
   background-color: var(--cl-bg2);
   z-index: 0;
   position: fixed;

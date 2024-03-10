@@ -29,35 +29,11 @@ const navbar = {
 };
 
 function Header() {
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
-    if (document.getElementById("header")) {
-      if (
-        document.body.scrollTop > 30 ||
-        document.documentElement.scrollTop > 30
-      ) {
-        document.getElementById("header").classList.add("shadow-header");
-        document.getElementById("header").classList.add("bg-white");
-      } else {
-        document.getElementById("header").classList.remove("shadow-header");
-        document.getElementById("header").classList.remove("bg-white");
-      }
-    }
-  }
-
   return (
     <>
       <div className="header-height"></div>
-      <header
-        data-scroll
-        data-scroll-id="hey"
-        id="header"
-        className="py-6 transition duration-300 ease-in-out header"
-      >
-        <div className="header__container">
+      <header className="header">
+        <div className="container">
           {/* Mobile Header */}
           <Popover>
             {({ open }) => (
@@ -71,11 +47,9 @@ function Header() {
                       height={50}
                       alt="Logo"
                     />
-                    <div className="logo-letters">
-                      <span className="logo-letters__first-row">Balanced</span>
-                      <span className="logo-letters__second-row">
-                        Team Maker
-                      </span>
+                    <div className="logo__text">
+                      <span className="logo__text--first-row">Balanced</span>
+                      <span className="logo__text--second-row">Team Maker</span>
                     </div>
                   </Link>
                   <Popover.Button className="hamburguer-button">
@@ -116,10 +90,10 @@ function Header() {
                       leaveFrom="leave-from-panel"
                       leaveTo="leave-to-panel"
                     >
-                      <Popover.Panel className="navbar-panel">
-                        <ul className="navbar-ul navbar-ul--mobile">
+                      <Popover.Panel className="navbar__panel">
+                        <ul className="navbar__list navbar__list--mobile">
                           {navbar.navigation.map((item) => (
-                            <li className="navbar-li" key={item.name}>
+                            <li className="navbar__item" key={item.name}>
                               <NavLink
                                 to={item.href}
                                 className="navbar__link navbar__link--mobile"
@@ -129,8 +103,8 @@ function Header() {
                             </li>
                           ))}
                         </ul>
-                        <ul className="navbar-ul navbar-ul--mobile">
-                          <li className="navbar-li">
+                        <ul className="navbar__list navbar__list--mobile">
+                          <li className="navbar__item">
                             <NavLink
                               to={navbar.logIn.href}
                               className="navbar__link navbar__link--mobile"
@@ -138,7 +112,7 @@ function Header() {
                               {navbar.logIn.name}
                             </NavLink>
                           </li>
-                          <li className="navbar-li">
+                          <li className="navbar__item">
                             <NavLink
                               to={navbar.signUp.href}
                               className="button button--navbar"
@@ -152,7 +126,11 @@ function Header() {
                   </nav>
                   <div
                     className="overlay-mobile"
-                    style={open ? { opacity: 1 } : { opacity: 0 }}
+                    style={
+                      open
+                        ? { opacity: 1 }
+                        : { opacity: 0, visibility: "hidden" }
+                    }
                   ></div>
                 </div>
               </>
@@ -169,15 +147,13 @@ function Header() {
                       height={50}
                       alt="Logo"
                     />
-                    <div className="logo-letters">
-                      <span className="logo-letters__first-row">Balanced</span>
-                      <span className="logo-letters__second-row">
-                        Team Maker
-                      </span>
+                    <div className="logo__text">
+                      <span className="logo__text--first-row">Balanced</span>
+                      <span className="logo__text--second-row">Team Maker</span>
                     </div>
                   </Link>
                   <nav className="navbar navbar--tablet">
-                    <ul className="navbar-ul">
+                    <ul className="navbar__list">
                       <li>
                         <NavLink
                           to={navbar.logIn.href}
@@ -234,10 +210,10 @@ function Header() {
                       leaveFrom="leave-from-panel"
                       leaveTo="leave-to-panel"
                     >
-                      <Popover.Panel className="navbar-panel">
-                        <ul className="navbar-ul navbar-ul--mobile">
+                      <Popover.Panel className="navbar__panel">
+                        <ul className="navbar__list navbar__list--mobile">
                           {navbar.navigation.map((item) => (
-                            <li className="navbar-li" key={item.name}>
+                            <li className="navbar__item" key={item.name}>
                               <NavLink
                                 to={item.href}
                                 className="navbar__link navbar__link--mobile"
@@ -252,7 +228,11 @@ function Header() {
                   </nav>
                   <div
                     className="overlay-mobile"
-                    style={open ? { opacity: 1 } : { opacity: 0 }}
+                    style={
+                      open
+                        ? { opacity: 1 }
+                        : { opacity: 0, visibility: "hidden" }
+                    }
                   ></div>
                 </div>
               </>
@@ -268,13 +248,13 @@ function Header() {
                 height={50}
                 alt="Logo"
               />
-              <div className="logo-letters">
-                <span className="logo-letters__first-row">Balanced</span>
-                <span className="logo-letters__second-row">Team Maker</span>
+              <div className="logo__text">
+                <span className="logo__text--first-row">Balanced</span>
+                <span className="logo__text--second-row">Team Maker</span>
               </div>
             </Link>
             <nav className="navbar">
-              <ul className="navbar-ul">
+              <ul className="navbar__list">
                 {navbar.navigation.map((item) => (
                   <li key={item.name}>
                     <NavLink to={item.href} className="navbar__link">
@@ -283,7 +263,7 @@ function Header() {
                   </li>
                 ))}
               </ul>
-              <ul className="navbar-ul">
+              <ul className="navbar__list">
                 <li>
                   <NavLink to={navbar.logIn.href} className="navbar__link">
                     {navbar.logIn.name}

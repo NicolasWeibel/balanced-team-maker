@@ -175,6 +175,11 @@
   --space-3xl: 32px;
   --space-4xl: 36px;
   --space-5xl: 40px;
+  --space-xxl: 50px;
+  --space-2xxl: 60px;
+  --space-3xxl: 70px;
+  --space-4xxl: 80px;
+  --space-5xxl: 90px;
 }
 
 .theme-root.dark {
@@ -213,6 +218,12 @@ body {
     "Droid Sans", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1292px;
+  margin: auto;
+  padding: 0 5%;
 }
 
 .hidden {
@@ -254,4 +265,13 @@ body {
   --tw-ring-offset-shadow: 0 0 0 2px var(--cl-bg2);
   --tw-ring-shadow: 0 0 0 4px var(--cl-primary);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 #0000;
+}
+
+.link-ext {
+  color: var(--cl-primary);
+  text-decoration: none;
+}
+
+.link-ext:hover {
+  text-decoration: underline;
 }
